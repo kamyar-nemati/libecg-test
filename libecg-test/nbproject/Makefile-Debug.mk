@@ -52,11 +52,15 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=
+LDLIBSOPTIONS=-Wl,-rpath,ChartDirector/lib ChartDirector/lib/libchartdir.so ../../libecg/libecg/dist/Release/GNU-Linux/liblibecg.a
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
 	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libecg-test
+
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libecg-test: ChartDirector/lib/libchartdir.so
+
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libecg-test: ../../libecg/libecg/dist/Release/GNU-Linux/liblibecg.a
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libecg-test: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
@@ -69,6 +73,7 @@ ${OBJECTDIR}/main.o: main.cpp
 
 # Subprojects
 .build-subprojects:
+	cd ../../libecg/libecg && ${MAKE}  -f Makefile CONF=Release
 
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
@@ -77,6 +82,7 @@ ${OBJECTDIR}/main.o: main.cpp
 
 # Subprojects
 .clean-subprojects:
+	cd ../../libecg/libecg && ${MAKE}  -f Makefile CONF=Release clean
 
 # Enable dependency checking
 .dep.inc: .depcheck-impl

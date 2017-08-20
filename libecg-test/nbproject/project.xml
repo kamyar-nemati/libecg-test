@@ -6,10 +6,15 @@
             <name>libecg-test</name>
             <c-extensions/>
             <cpp-extensions>cpp</cpp-extensions>
-            <header-extensions/>
+            <header-extensions>h</header-extensions>
             <sourceEncoding>UTF-8</sourceEncoding>
-            <make-dep-projects/>
-            <sourceRootList/>
+            <make-dep-projects>
+                <make-dep-project>../../libecg/libecg</make-dep-project>
+            </make-dep-projects>
+            <sourceRootList>
+                <sourceRootElem>ChartDirector</sourceRootElem>
+                <sourceRootElem>ECGs</sourceRootElem>
+            </sourceRootList>
             <confList>
                 <confElem>
                     <name>Debug</name>

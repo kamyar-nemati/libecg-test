@@ -8,6 +8,102 @@
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
                    projectFiles="true">
+      <logicalFolder name="ChartDirector"
+                     displayName="ChartDirector"
+                     projectFiles="true">
+        <logicalFolder name="include" displayName="include" projectFiles="true">
+          <itemPath>ChartDirector/include/FinanceChart.h</itemPath>
+          <itemPath>ChartDirector/include/bchartdir.h</itemPath>
+          <itemPath>ChartDirector/include/chartdir.h</itemPath>
+          <itemPath>ChartDirector/include/memblock.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="lib" displayName="lib" projectFiles="true">
+          <logicalFolder name="fonts" displayName="fonts" projectFiles="true">
+            <itemPath>ChartDirector/lib/fonts/LICENSE</itemPath>
+            <itemPath>ChartDirector/lib/fonts/LiberationSans-Bold.ttf</itemPath>
+            <itemPath>ChartDirector/lib/fonts/LiberationSans-BoldItalic.ttf</itemPath>
+            <itemPath>ChartDirector/lib/fonts/LiberationSans-Italic.ttf</itemPath>
+            <itemPath>ChartDirector/lib/fonts/LiberationSans-Regular.ttf</itemPath>
+            <itemPath>ChartDirector/lib/fonts/LiberationSerif-Bold.ttf</itemPath>
+            <itemPath>ChartDirector/lib/fonts/LiberationSerif-BoldItalic.ttf</itemPath>
+            <itemPath>ChartDirector/lib/fonts/LiberationSerif-Italic.ttf</itemPath>
+            <itemPath>ChartDirector/lib/fonts/LiberationSerif-Regular.ttf</itemPath>
+          </logicalFolder>
+          <itemPath>ChartDirector/lib/libchartdir.so</itemPath>
+          <itemPath>ChartDirector/lib/libchartdir.so.6.0</itemPath>
+          <itemPath>ChartDirector/lib/libchartdir.so.6.0.0</itemPath>
+        </logicalFolder>
+        <itemPath>ChartDirector/LICENSE.TXT</itemPath>
+        <itemPath>ChartDirector/chartdir_cpp_linux_64.tar.gz</itemPath>
+      </logicalFolder>
+      <logicalFolder name="ECGs" displayName="ECGs" projectFiles="true">
+        <itemPath>ECGs/samples100.txt</itemPath>
+        <itemPath>ECGs/samples100_long.txt</itemPath>
+        <itemPath>ECGs/samples101.txt</itemPath>
+        <itemPath>ECGs/samples101_long.txt</itemPath>
+        <itemPath>ECGs/samples102.txt</itemPath>
+        <itemPath>ECGs/samples102_long.txt</itemPath>
+        <itemPath>ECGs/samples103.txt</itemPath>
+        <itemPath>ECGs/samples103_long.txt</itemPath>
+        <itemPath>ECGs/samples104.txt</itemPath>
+        <itemPath>ECGs/samples104_long.txt</itemPath>
+        <itemPath>ECGs/samples105.txt</itemPath>
+        <itemPath>ECGs/samples105_long.txt</itemPath>
+        <itemPath>ECGs/samples106.txt</itemPath>
+        <itemPath>ECGs/samples106_long.txt</itemPath>
+        <itemPath>ECGs/samples107.txt</itemPath>
+        <itemPath>ECGs/samples107_long.txt</itemPath>
+        <itemPath>ECGs/samples108.txt</itemPath>
+        <itemPath>ECGs/samples108_long.txt</itemPath>
+        <itemPath>ECGs/samples109.txt</itemPath>
+        <itemPath>ECGs/samples109_long.txt</itemPath>
+        <itemPath>ECGs/samples111.txt</itemPath>
+        <itemPath>ECGs/samples111_long.txt</itemPath>
+        <itemPath>ECGs/samples112.txt</itemPath>
+        <itemPath>ECGs/samples112_long.txt</itemPath>
+        <itemPath>ECGs/samples113.txt</itemPath>
+        <itemPath>ECGs/samples113_long.txt</itemPath>
+        <itemPath>ECGs/samples114.txt</itemPath>
+        <itemPath>ECGs/samples114_long.txt</itemPath>
+        <itemPath>ECGs/samples115.txt</itemPath>
+        <itemPath>ECGs/samples115_long.txt</itemPath>
+        <itemPath>ECGs/samples116.txt</itemPath>
+        <itemPath>ECGs/samples116_long.txt</itemPath>
+        <itemPath>ECGs/samples117.txt</itemPath>
+        <itemPath>ECGs/samples117_long.txt</itemPath>
+        <itemPath>ECGs/samples118.txt</itemPath>
+        <itemPath>ECGs/samples118_long.txt</itemPath>
+        <itemPath>ECGs/samples119.txt</itemPath>
+        <itemPath>ECGs/samples119_long.txt</itemPath>
+        <itemPath>ECGs/samples121.txt</itemPath>
+        <itemPath>ECGs/samples121_long.txt</itemPath>
+        <itemPath>ECGs/samples122.txt</itemPath>
+        <itemPath>ECGs/samples122_long.txt</itemPath>
+        <itemPath>ECGs/samples123.txt</itemPath>
+        <itemPath>ECGs/samples123_long.txt</itemPath>
+        <itemPath>ECGs/samples124.txt</itemPath>
+        <itemPath>ECGs/samples124_long.txt</itemPath>
+        <itemPath>ECGs/samples200.txt</itemPath>
+        <itemPath>ECGs/samples200_long.txt</itemPath>
+        <itemPath>ECGs/samples201.txt</itemPath>
+        <itemPath>ECGs/samples201_long.txt</itemPath>
+        <itemPath>ECGs/samples202.txt</itemPath>
+        <itemPath>ECGs/samples202_long.txt</itemPath>
+        <itemPath>ECGs/samples203.txt</itemPath>
+        <itemPath>ECGs/samples203_long.txt</itemPath>
+        <itemPath>ECGs/samples205.txt</itemPath>
+        <itemPath>ECGs/samples205_long.txt</itemPath>
+        <itemPath>ECGs/samples207.txt</itemPath>
+        <itemPath>ECGs/samples207_long.txt</itemPath>
+        <itemPath>ECGs/samples208.txt</itemPath>
+        <itemPath>ECGs/samples208_long.txt</itemPath>
+        <itemPath>ECGs/samples209.txt</itemPath>
+        <itemPath>ECGs/samples209_long.txt</itemPath>
+        <itemPath>ECGs/samples210.txt</itemPath>
+        <itemPath>ECGs/samples210_long.txt</itemPath>
+        <itemPath>ECGs/samples212.txt</itemPath>
+        <itemPath>ECGs/samples212_long.txt</itemPath>
+      </logicalFolder>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
@@ -26,6 +122,10 @@
       <itemPath>Makefile</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>ChartDirector</Elem>
+    <Elem>ECGs</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="Debug" type="1">
@@ -38,7 +138,231 @@
         <ccTool>
           <standard>11</standard>
         </ccTool>
+        <linkerTool>
+          <linkerDynSerch>
+            <pElem>ChartDirector/lib</pElem>
+          </linkerDynSerch>
+          <linkerLibItems>
+            <linkerLibFileItem>ChartDirector/lib/libchartdir.so</linkerLibFileItem>
+            <linkerLibProjectItem>
+              <makeArtifact PL="../../libecg/libecg"
+                            CT="3"
+                            CN="Release"
+                            AC="true"
+                            BL="true"
+                            WD="../../libecg/libecg"
+                            BC="${MAKE}  -f Makefile CONF=Release"
+                            CC="${MAKE}  -f Makefile CONF=Release clean"
+                            OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/liblibecg.a">
+              </makeArtifact>
+            </linkerLibProjectItem>
+          </linkerLibItems>
+        </linkerTool>
       </compileType>
+      <item path="ChartDirector/LICENSE.TXT" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ChartDirector/chartdir_cpp_linux_64.tar.gz"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ChartDirector/include/FinanceChart.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ChartDirector/include/bchartdir.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ChartDirector/include/chartdir.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ChartDirector/include/memblock.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ChartDirector/lib/fonts/LICENSE" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ChartDirector/lib/fonts/LiberationSans-Bold.ttf"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ChartDirector/lib/fonts/LiberationSans-BoldItalic.ttf"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ChartDirector/lib/fonts/LiberationSans-Italic.ttf"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ChartDirector/lib/fonts/LiberationSans-Regular.ttf"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ChartDirector/lib/fonts/LiberationSerif-Bold.ttf"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ChartDirector/lib/fonts/LiberationSerif-BoldItalic.ttf"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ChartDirector/lib/fonts/LiberationSerif-Italic.ttf"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ChartDirector/lib/fonts/LiberationSerif-Regular.ttf"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ChartDirector/lib/libchartdir.so" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ChartDirector/lib/libchartdir.so.6.0"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ChartDirector/lib/libchartdir.so.6.0.0"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ECGs/samples100.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples100_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples101.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples101_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples102.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples102_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples103.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples103_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples104.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples104_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples105.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples105_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples106.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples106_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples107.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples107_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples108.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples108_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples109.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples109_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples111.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples111_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples112.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples112_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples113.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples113_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples114.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples114_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples115.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples115_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples116.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples116_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples117.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples117_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples118.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples118_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples119.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples119_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples121.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples121_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples122.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples122_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples123.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples123_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples124.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples124_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples200.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples200_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples201.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples201_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples202.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples202_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples203.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples203_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples205.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples205_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples207.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples207_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples208.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples208_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples209.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples209_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples210.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples210_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples212.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples212_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
@@ -63,6 +387,210 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="ChartDirector/LICENSE.TXT" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ChartDirector/chartdir_cpp_linux_64.tar.gz"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ChartDirector/include/FinanceChart.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ChartDirector/include/bchartdir.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ChartDirector/include/chartdir.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ChartDirector/include/memblock.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ChartDirector/lib/fonts/LICENSE" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ChartDirector/lib/fonts/LiberationSans-Bold.ttf"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ChartDirector/lib/fonts/LiberationSans-BoldItalic.ttf"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ChartDirector/lib/fonts/LiberationSans-Italic.ttf"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ChartDirector/lib/fonts/LiberationSans-Regular.ttf"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ChartDirector/lib/fonts/LiberationSerif-Bold.ttf"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ChartDirector/lib/fonts/LiberationSerif-BoldItalic.ttf"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ChartDirector/lib/fonts/LiberationSerif-Italic.ttf"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ChartDirector/lib/fonts/LiberationSerif-Regular.ttf"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ChartDirector/lib/libchartdir.so" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ChartDirector/lib/libchartdir.so.6.0"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ChartDirector/lib/libchartdir.so.6.0.0"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="ECGs/samples100.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples100_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples101.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples101_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples102.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples102_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples103.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples103_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples104.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples104_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples105.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples105_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples106.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples106_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples107.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples107_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples108.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples108_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples109.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples109_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples111.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples111_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples112.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples112_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples113.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples113_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples114.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples114_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples115.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples115_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples116.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples116_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples117.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples117_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples118.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples118_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples119.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples119_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples121.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples121_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples122.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples122_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples123.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples123_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples124.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples124_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples200.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples200_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples201.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples201_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples202.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples202_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples203.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples203_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples205.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples205_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples207.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples207_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples208.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples208_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples209.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples209_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples210.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples210_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples212.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ECGs/samples212_long.txt" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
