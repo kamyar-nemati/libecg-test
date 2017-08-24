@@ -15,8 +15,8 @@
 
 #include <string>
 
-#include "../../libecg/libecg/encode.h"
-#include "../../libecg/libecg/decode.h"
+#include "../../libecg/libecg/encoder.h"
+#include "../../libecg/libecg/decoder.h"
 
 /* © 2015 Advanced Software Engineering Limited. All rights reserved */
 #include "ChartDirector/include/chartdir.h"
@@ -74,13 +74,13 @@ int main(int argc, char** argv) {
     int aperture_max = 32;
     
     //Perform a sample compression
-    Encode* e = new Encode(dataset_length, dataset, threshold, aperture, eStat);
+    Encoder* e = new Encoder(dataset_length, dataset, threshold, aperture, eStat);
     assert(eStat);
     assert(e->encode());
     assert(e->write(file_com, e->BINARY));
     cr = e->getBinarySequeneCompressionRatio();
     std::printf("CR: %f\n", cr);
-    Decode* d = new Decode(file_com, Base::BINARY, dStat);
+    Decoder* d = new Decoder(file_com, Base::BINARY, dStat);
     assert(dStat);
     assert(d->decode());
     assert(d->write(file_rec, d->BINARY));
@@ -110,13 +110,13 @@ int main(int argc, char** argv) {
             for (int j = aperture_min; j < aperture_max; ++j) {
                 lst_threshold->push_back(i);
                 lst_aperture->push_back(j);
-                Encode* en = new Encode(dataset_length, dataset, i, j, eStat);
+                Encoder* en = new Encoder(dataset_length, dataset, i, j, eStat);
                 assert(eStat);
                 assert(en->encode());
                 cr = en->getBinarySequeneCompressionRatio();
                 lst_cr->push_back(cr);
                 std::printf("CR: %f\n", cr);
-                Decode* de = new Decode(e->getBinarySequeneCompressed(), dStat);
+                Decoder* de = new Decoder(e->getBinarySequeneCompressed(), dStat);
                 assert(dStat);
                 assert(de->decode());
                 std::list<int>* lst_org = new std::list<int>();
