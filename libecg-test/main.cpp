@@ -15,90 +15,198 @@
 
 #include <string>
 
-#include "../../libecg/libecg/encoder.h"
-#include "../../libecg/libecg/decoder.h"
+/* libecg */
+#include "../../libecg/libecg/encoder.h" //Include the Encoder class
+#include "../../libecg/libecg/decoder.h" //Include the Decoder class
 
 /* © 2015 Advanced Software Engineering Limited. All rights reserved */
 #include "ChartDirector/include/chartdir.h"
 
 using namespace libecg;
 
-/* 
- * @adopted: <a>http://www.advsofteng.com/doc/cdcpp.htm#multiline.htm</a>
+/**
+ * @description This function draws a line chart of overlapping signals.
+ * 
+ * @param <i>const int&</i> <b>dataset_frequency</b> Sample-frequency of 
+ * the dataset.
+ * @param <i>const int&</i> <b>dataset_length</b> Number of samples in 
+ * the dataset.
+ * @param <i>const std::string&</i> <b>dataset</b> The path to the dataset.
+ * @param <i>const std::string&</i> <b>file_plt</b> The file to be created 
+ * as the output.
+ * @param <i>const int&</i> <b>threshold</b> The threshold size.
+ * @param <i>const int&</i> <b>aperture</b> The aperture size.
+ * @param <i>const std::list:int* const</i> <b>lst_org</b> List of the 
+ * original samples (The original signal).
+ * @param <i>const std::list:int* const</i> <b>lst_rec</b> List of the 
+ * reconstructed samples (The reconstructed signal).
+ * 
+ * @return void
+ * 
+ * @copyright © 2015 Advanced Software Engineering Limited. All rights reserved
+ * @adopted_from <a>http://www.advsofteng.com/doc/cdcpp.htm#multiline.htm</a>
  */
-void plot_lineChart(const int& dataset_frequency, 
+void plot_lineChart(
+        const int& dataset_frequency, 
         const int& dataset_length, 
         const std::string& dataset, 
         const std::string& file_plt, 
         const int& threshold, 
         const int& aperture, 
         const std::list<int>* const lst_org, 
-        const std::list<int>* const lst_rec);
+        const std::list<int>* const lst_rec
+);
 
-/*
- * @adopted: <a>http://www.advsofteng.com/doc/cdcpp.htm#multibar.htm</a>
+/**
+ * @description This function draws a bar chart that represents the overall 
+ * compression performance of each and every individual compression that 
+ * issued according to the given threshold and aperture.
+ * 
+ * @param <i>const int&</i> <b>rawResult_length</b> The total number of 
+ * compression applied.
+ * @param <i>const std::string&</i> <b>dataset</b> The path to the dataset.
+ * @param <i>const std::string&</i> <b>file_brs</b> The file to be created 
+ * as the output.
+ * @param <i>const std::list:int* const</i> <b>lst_threshold</b> The threshold 
+ * size for each and every individual compression.
+ * @param <i>const std::list:int* const</i> <b>lst_aperture</b> The aperture 
+ * size for each and every individual compression.
+ * @param <i>const std::list:float* const</i> <b>lst_cr</b> The resulting 
+ * Compression Ratio for each and every individual compression.
+ * @param <i>const std::list:float* const</i> <b>lst_prd</b> The resulting 
+ * Percent Root-Mean-Square Difference for each and every individual 
+ * compression.
+ * @param <i>const std::list:float* const</i> <b>lst_qs</b> The resulting 
+ * Quality Score for each and every individual compression.
+ * 
+ * @return void
+ * 
+ * @copyright © 2015 Advanced Software Engineering Limited. All rights reserved
+ * @adopted_from: <a>http://www.advsofteng.com/doc/cdcpp.htm#multibar.htm</a>
  */
-void plot_barChart(const int& rawResult_length, 
+void plot_barChart(
+        const int& rawResult_length, 
         const std::string& dataset, 
         const std::string& file_brs, 
         const std::list<int>* const lst_threshold, 
         const std::list<int>* const lst_aperture, 
         const std::list<float>* const lst_cr, 
         const std::list<float>* const lst_prd, 
-        const std::list<float>* const lst_qs);
+        const std::list<float>* const lst_qs
+);
 
 /*
  * 
  */
 int main(int argc, char** argv) {
     
+    //A prefix for all output files
     const std::string OUTPUT_FILE_PREFIX = "_output_";
     
-    int dataset_frequency = 360;
-    int dataset_length = 3600;
-//    int dataset_length = 21600;
-    std::string dataset = "ECGs/samples100.txt";
-//    std::string dataset = "ECGs/samples100_long.txt";
+    //Setting all the output files
     std::string file_com = OUTPUT_FILE_PREFIX + "data_compressed.txt";
     std::string file_rec = OUTPUT_FILE_PREFIX + "data_reconstructed.txt";
     std::string file_plt = OUTPUT_FILE_PREFIX + "plot_overlapping_signals.png";
     std::string file_brs = OUTPUT_FILE_PREFIX + "plot_performance_evaluation.png";
+    
+    /* -------------------------------------------------------------------------
+     * |              Setting variables to initialize compression              |
+     * -------------------------------------------------------------------------
+     */
+    
+    //Number of samples that each dataset holds per one second.
+    int dataset_frequency = 360;
+    
+    //The dataset file
+    /* Either this*/
+    int dataset_length = 3600;
+    std::string dataset = "ECGs/samples100.txt";
+    /* Or this */
+//    int dataset_length = 21600;
+//    std::string dataset = "ECGs/samples100_long.txt";
+    
+    //One compression
     int threshold = 7;
     int aperture = 15;
     bool eStat, dStat;
     float cr, prd, qs;
+    
+    //Multiple Compression
     bool perform_evaluation = true;
     int threshold_min = 3;
     int threshold_max = 16;
     int aperture_min = 3;
     int aperture_max = 32;
     
-    //Perform a sample compression
+    /* -------------------------------------------------------------------------
+     * |                      Perform a sample compression                     |
+     * -------------------------------------------------------------------------
+     */
+    
+    //Create compression object
     Encoder* e = new Encoder(dataset_length, dataset, threshold, aperture, eStat);
+    
+    //Is object fine?
     assert(eStat);
+    
+    //Compress signal
     assert(e->encode());
+    
+    //Write the compressed signal into a file
     assert(e->write(file_com, e->BINARY));
+    
+    //Get the compression ratio result
     cr = e->getBinarySequeneCompressionRatio();
+    
+    //Print out the compression ratio
     std::printf("CR: %f\n", cr);
+    
+    //Create decompression object
     Decoder* d = new Decoder(file_com, Base::BINARY, dStat);
+    
+    //Is object fine?
     assert(dStat);
+    
+    //Decompress signal
     assert(d->decode());
+    
+    //Write the decompressed signal into a file
     assert(d->write(file_rec, d->BINARY));
+    
+    //Get the original signal in the form of a list of samples
     std::list<int>* lst_org = new std::list<int>();
     e->getOriginal(lst_org);
+    
+    //Get the percent root-mean-square difference result
     prd = d->getPercentRootMeanSquareDifference(lst_org);
+    
+    //Print out the percent root-mean-square difference
     std::printf("PRD: %f\n", prd);
+    
+    //Calculate the quality score
     qs = cr / prd;
+    
+    //Print out the quality score
     std::printf("QS: %f\n", qs);
+    
+    //Get the reconstructed signal in the form of a list of samples
     std::list<int>* lst_rec = new std::list<int>();
     d->getReconstructed(lst_rec);
+    
+    //Draw a line chart of overlapping signals
     plot_lineChart(dataset_frequency, dataset_length, dataset, file_plt, threshold, aperture, lst_org, lst_rec);
+    
+    //Clean up memory
     delete lst_rec;
     delete lst_org;
     delete d;
     delete e;
     
-    //Perform compression performance evaluation
+    /* -------------------------------------------------------------------------
+     * |Perform a comprehensive performance evaluation on multiple compressions|
+     * -------------------------------------------------------------------------
+     */
+    
     if (perform_evaluation) {
         std::list<int>* lst_threshold = new std::list<int>();
         std::list<int>* lst_aperture = new std::list<int>();
