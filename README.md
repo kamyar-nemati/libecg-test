@@ -11,39 +11,37 @@ Lastly, the prototype attempts to compress the signal again, but this time withi
 2. ChartDirector © 2015 Advanced Software Engineering Limited. All rights reserved. (Extract the file _libchartdir.so_ from _chartdir_cpp_linux_64.tar.gz_ and place into _ChartDirector/lib_)
 
 ## Sample Output
-`
-Received parameters:
-- ECG signal dataset: ECGs/samples100.txt
-- Dataset length: 3600
-- Threshold: 7
-- Aperture: 15
-Initialising Encoder...
-Reading data...
-Encoder object initialised by 3600 samples.
-Further analysis:
-- Samples ranging from 895 to 1216. Hence, 11 bits per sample needed.
-- The total number of 39600 bits required to represent the entire dataset.
-Compressing...
-Phase 1: Lossless Compression (3671 items)
-Phase 2-1: Lossy Compression Filter (3671 items)
-Phase 2-2: Redundant Error Eliminator (525 items)
-Phase 2-3: Error Count Controller (529 items)
-Phase 3: Sample Scale Down (530 items)
-Embedding additional data...
-Translating 534 decimal items into bits...
-Translated into 3874 bits.
-Compression is done.
-CR: 10.221992
-Initialising Decoder...
-Translating 3874 bits...
-Translated into 534 decimal numbers.
-Decoder object initialised.
-Decompressing...
-Reading embedded data...
-Phase 1: Sample Scale Up (530 items)
-Phase 2: Redundant Error Recovery (3671 items)
-Phase 3: Decompression (3600 items)
-Decompression is done.
-PRD: 0.615284
-QS: 16.613459
-`
+`Received parameters:`
+`- ECG signal dataset: ECGs/samples100.txt`
+`- Dataset length: 3600`
+`- Threshold: 7`
+`- Aperture: 15`
+`Initialising Encoder...`
+`Reading data...`
+`Encoder object initialised by 3600 samples.`
+`Further analysis:`
+`- Samples ranging from 895 to 1216. Hence, 11 bits per sample needed.`
+`- The total number of 39600 bits required to represent the entire dataset.`
+`Compressing...`
+`Phase 1: Lossless Compression (3671 items)`
+`Phase 2-1: Lossy Compression Filter (3671 items)`
+`Phase 2-2: Redundant Error Eliminator (525 items)`
+`Phase 2-3: Error Count Controller (529 items)`
+`Phase 3: Sample Scale Down (530 items)`
+`Embedding additional data...`
+`Translating 534 decimal items into bits...`
+`Translated into 3874 bits.`
+`Compression is done.`
+`CR: 10.221992`
+`Initialising Decoder...`
+`Translating 3874 bits...`
+`Translated into 534 decimal numbers.`
+`Decoder object initialised.`
+`Decompressing...`
+`Reading embedded data...`
+`Phase 1: Sample Scale Up (530 items)`
+`Phase 2: Redundant Error Recovery (3671 items)`
+`Phase 3: Decompression (3600 items)`
+`Decompression is done.`
+`PRD: 0.615284`
+`QS: 16.613459`
