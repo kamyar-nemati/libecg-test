@@ -7,7 +7,13 @@ The prototype application is a test scenario to examine the integrity of the hyb
 Lastly, the prototype attempts to compress the signal again, but this time within a limited range of threshold and aperture (which means compressing it multiple times) in order to reveal the affect of different input factors.
 
 ## Dependencies
-1. libecg (v >= 1.1.0.3)
+1. [libecg](https://github.com/kamyar-nemati/libecg) (v >= 1.1.0.3)
+
+> To get _libecg_ sub-project, run the following commands:
+>> `git submodule init`
+>>
+>> `git submodule update`
+
 2. ChartDirector © 2015 Advanced Software Engineering Limited. All rights reserved. (Extract the file _libchartdir.so_ from _chartdir_cpp_linux_64.tar.gz_ and place into _ChartDirector/lib_)
 
 ## Sample Output
