@@ -8,11 +8,9 @@ Lastly, the prototype attempts to compress the signal again, but this time withi
 
 ## Dependencies
 1. [libecg](https://github.com/kamyar-nemati/libecg) (v >= 1.1.0.3)
-
-> To get _libecg_ sub-project, run the following commands:
->> `git submodule init`
->>
->> `git submodule update`
+    * To get _libecg_ sub-project, run the following commands:
+        * `git submodule init`
+        * `git submodule update`
 
 2. ChartDirector © 2015 Advanced Software Engineering Limited. All rights reserved. (Extract the file _libchartdir.so_ from _chartdir_cpp_linux_64.tar.gz_ and place into _ChartDirector/lib_)
 
