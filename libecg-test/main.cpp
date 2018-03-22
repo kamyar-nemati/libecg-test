@@ -16,8 +16,8 @@
 #include <string>
 
 /* libecg */
-#include "../../libecg/libecg/encoder.h" //Include the Encoder class
-#include "../../libecg/libecg/decoder.h" //Include the Decoder class
+#include "../libecg/libecg/encoder.h" //Include the Encoder class
+#include "../libecg/libecg/decoder.h" //Include the Decoder class
 
 /* © 2015 Advanced Software Engineering Limited. All rights reserved */
 #include "ChartDirector/include/chartdir.h"

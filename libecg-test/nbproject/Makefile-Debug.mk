@@ -52,7 +52,7 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=-Wl,-rpath,ChartDirector/lib ChartDirector/lib/libchartdir.so ../../libecg/libecg/dist/Release/GNU-Linux/liblibecg.a
+LDLIBSOPTIONS=-Wl,-rpath,'ChartDirector/lib' ChartDirector/lib/libchartdir.so ../libecg/libecg/dist/Release/GNU-Linux/liblibecg.a
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
@@ -60,29 +60,30 @@ LDLIBSOPTIONS=-Wl,-rpath,ChartDirector/lib ChartDirector/lib/libchartdir.so ../.
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libecg-test: ChartDirector/lib/libchartdir.so
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libecg-test: ../../libecg/libecg/dist/Release/GNU-Linux/liblibecg.a
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libecg-test: ../libecg/libecg/dist/Release/GNU-Linux/liblibecg.a
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libecg-test: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libecg-test ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/main.o: main.cpp 
+${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
 
 # Subprojects
 .build-subprojects:
-	cd ../../libecg/libecg && ${MAKE}  -f Makefile CONF=Release
+	cd ../libecg/libecg && ${MAKE}  -f Makefile CONF=Release
 
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
+	${RM} -r ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libchartdir.so
 	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libecg-test
 
 # Subprojects
 .clean-subprojects:
-	cd ../../libecg/libecg && ${MAKE}  -f Makefile CONF=Release clean
+	cd ../libecg/libecg && ${MAKE}  -f Makefile CONF=Release clean
 
 # Enable dependency checking
 .dep.inc: .depcheck-impl

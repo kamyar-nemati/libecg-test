@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configurationDescriptor version="97">
+<configurationDescriptor version="100">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
@@ -139,18 +139,19 @@
           <standard>11</standard>
         </ccTool>
         <linkerTool>
+          <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/libecg-test</output>
           <linkerDynSerch>
             <pElem>ChartDirector/lib</pElem>
           </linkerDynSerch>
           <linkerLibItems>
             <linkerLibFileItem>ChartDirector/lib/libchartdir.so</linkerLibFileItem>
             <linkerLibProjectItem>
-              <makeArtifact PL="../../libecg/libecg"
+              <makeArtifact PL="../libecg/libecg"
                             CT="3"
                             CN="Release"
                             AC="true"
                             BL="true"
-                            WD="../../libecg/libecg"
+                            WD="../libecg/libecg"
                             BC="${MAKE}  -f Makefile CONF=Release"
                             CC="${MAKE}  -f Makefile CONF=Release clean"
                             OP="${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/liblibecg.a">
